@@ -1,0 +1,93 @@
+:root{
+    --white: #fff;
+    --grey: #2f2f2f;
+}
+
+*{    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+html{
+    font-size: 62.5%;
+    font-family: Space-Grotesk, sans-serif;     
+}
+
+section {
+    height: 100vh;
+    min-width: 320px;
+    width: 100%;
+    background-image: url('https://studywithme.io/aesthetic-pomodoro-timer/c629a813b3561cfa40dd.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pomodoro--options{
+    height: 15%;
+    margin : 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+button{    
+    margin-bottom: 10px;    
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    font-size: 1.25rem;
+    border: 1px solid var(--white);
+    color: var(--white);
+    background-color: transparent;
+}
+
+.pomodoro-timer{
+    margin-top: 10px;
+    padding-bottom: 20px;
+    font-size: 7rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.timer--options {    
+    display: flex;
+    justify-content: center;    
+}
+.timer--options button{
+    width: 100px;
+    height: 30px;
+    padding: 0 10px;
+    font-size: 1.5rem;
+    background-color: var(--white);
+    font-weight: 400;
+    color: var(--grey);
+}
+
+.timer--options .gear-icon{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    padding: 5px;
+    background-image: url(./icons/icons8-settings.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.timer--options .reload-icon{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    padding: 5px;
+    background-image: url(./icons/icons8-reboot-48.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

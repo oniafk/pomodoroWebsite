@@ -1,0 +1,85 @@
+@media(min-width: 600px) {
+    .options-top{
+        width: 100%;
+        height: 150px;
+        padding: 0 35px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .options-top .studyWithMe--container .studyWithMe--Logo{
+        width: 250px;
+        height: 150px;
+        padding-top: 25px;
+        padding-left: 20px;
+    }
+
+    .options-top .studyWithMe--Logo{
+        display: inline-block;
+        width: 250px;
+        height: 175px;
+        margin-left: 10px;
+        padding: 5px;
+        background-image: url(./icons/2ac8395b71de97aa7964.png);
+        background-size:contain;        
+        background-repeat: no-repeat;
+    }
+
+    .options-top .discord--Logo{
+        display: inline-block;
+        width: 125px;
+        height: 125px;
+        margin-left: 10px;
+        padding: 5px;
+        background-image: url(./icons/icons8-discord-150.png);
+        background-size:contain;        
+        background-repeat: no-repeat;
+    }
+
+    .pomodoro--options{
+        margin-top: 15vh;
+        height: 10%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .pomodoro--options button{
+        margin: 0 10px;
+        font-size: 1.5rem;
+        padding: 8px 16px;
+    }
+
+    .pomodoro-timer{
+        font-size: 10rem;
+        font-family: "Space Grotesk",sans-serif;
+    }
+
+    .timer--options{
+        margin-bottom: 15vh;
+    }
+
+    .timer--options button{
+        width: 110px;
+        height: 30px;
+        font-size: 2rem;
+        padding: 0 10px;
+        font-weight: 400;
+    }
+
+    .spotify{
+        padding-left: 35px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: left;
+        width: 100%;
+    }
+    .spotify span{    
+        width: 120px;
+        height: 150px;
+        margin-left: 10px;
+        padding: 5px;
+        background-image: url(./icons/icons8-spotify-150.png);
+        background-size:contain;        
+        background-repeat: no-repeat;
+    }
+}
