@@ -48,6 +48,7 @@ button{
     border: 1px solid var(--white);
     color: var(--white);
     background-color: transparent;
+    transition: background-color 0.2s ease-in-out
 }
 
 button:hover{
@@ -105,10 +106,24 @@ button:hover{
     background-image: url(./icons/icons8-reboot-48.png);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;    
+}
+
+.rotateArrowAnimation{
+    animation: rotateArrow 1s linear 1;
+}
+
+@keyframes rotateArrow{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 .button--active{
     background-color: var(--white);
     color: var(--grey);
 }
+
