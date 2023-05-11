@@ -5,7 +5,6 @@ let startBtn = document.querySelector("#startBtn");
 let timer = document.querySelector("#pomodoroTimer");
 let restartTimerBtn = document.querySelector("#restartIcon");
 
-
 let secondsToRun;
 let minutesToRun;
 
@@ -18,7 +17,9 @@ function pomodoroTimerSetup () {
     longBreakBtn.classList.remove("button--active");    
       
     timer.textContent = "25:00";
-    return minutesToRun = 25;    
+    minutesToRun = 25;
+    secondsToRun = minutesToRun * 60;
+
 }
 
 function shortBreakTimerSetup () {
@@ -27,8 +28,9 @@ function shortBreakTimerSetup () {
     longBreakBtn.classList.remove("button--active");
     
     timer.textContent = "05:00";
+    minutesToRun = 5;
+    secondsToRun = minutesToRun * 60;
 
-    return minutesToRun = 5;
 }
 
 function longBreakTimerSetup () {
@@ -37,8 +39,8 @@ function longBreakTimerSetup () {
     longBreakBtn.classList.add("button--active");
     
     timer.textContent = "10:00";
-
-    return minutesToRun = 10;
+    minutesToRun = 10;
+    secondsToRun = minutesToRun * 60;
 } 
 
 restartTimerBtn.addEventListener("click", function() {
