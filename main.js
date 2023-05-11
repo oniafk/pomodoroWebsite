@@ -14,7 +14,9 @@ let running = false;
 function pomodoroTimerSetup () {
     pomodoroBtn.classList.add("button--active");
     shortBreakBtn.classList.remove("button--active");
-    longBreakBtn.classList.remove("button--active");    
+    longBreakBtn.classList.remove("button--active");
+    
+    stopTimer();
       
     timer.textContent = "25:00";
     minutesToRun = 25;
@@ -26,6 +28,8 @@ function shortBreakTimerSetup () {
     pomodoroBtn.classList.remove("button--active");
     shortBreakBtn.classList.add("button--active");
     longBreakBtn.classList.remove("button--active");
+
+    stopTimer();
     
     timer.textContent = "05:00";
     minutesToRun = 5;
@@ -37,6 +41,8 @@ function longBreakTimerSetup () {
     pomodoroBtn.classList.remove("button--active");
     shortBreakBtn.classList.remove("button--active");
     longBreakBtn.classList.add("button--active");
+
+    stopTimer();
     
     timer.textContent = "10:00";
     minutesToRun = 10;
@@ -48,7 +54,17 @@ restartTimerBtn.addEventListener("click", function() {
     setTimeout(function() {
         restartTimerBtn.classList.remove("rotateArrowAnimation");
       }, 1000);
-  });
+
+    stopTimer();
+
+    if (pomodoroBtn.classList.contains("button--active")) {
+        pomodoroTimerSetup();
+    } else if (shortBreakBtn.classList.contains("button--active")) {
+        shortBreakTimerSetup();
+    } else if (longBreakBtn.classList.contains("button--active")) {
+        longBreakTimerSetup();
+    }
+});
 
 function updateTimer(minutes, seconds) {    
 const time = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
@@ -83,7 +99,6 @@ function startTimer(minutesLeft, secondsLeft) {
     running = true;
     startBtn.textContent = "Pause"; 
   }
-
 
 function stopTimer() {
     clearInterval(countdown);
