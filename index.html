@@ -22,19 +22,20 @@
             </div>                                            
         </div>
         <div class="pomodoro--options">
-            <button>pomodoro</button>
-            <button>short break</button>
-            <button>long break</button>
+            <button id="pomodoro" onclick="pomodoroTimerSetup()">pomodoro</button>
+            <button id="shortBreak" onclick="shortBreakTimerSetup()">short break</button>
+            <button id="longBreak" onclick="longBreakTimerSetup()">long break</button>
         </div>
-        <div class="pomodoro-timer">25:00</div>
+        <div class="pomodoro-timer" id="pomodoroTimer">25:00</div>
         <div class="timer--options">
-            <button>start</button>
+            <button id="startBtn" onclick="stratBtnSetup()">Start</button>
             <span class="gear-icon"></span>
-            <span class="reload-icon"></span>
+            <span class="reload-icon" id="restartIcon"></span>
         </div>       
         <div class="spotify">
             <span></span>
         </div>
     </section>
+    <script src="./main.js"></script>
 </body>
 </html>

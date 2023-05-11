@@ -35,15 +35,24 @@ section {
     justify-content: space-around;
 }
 
-button{    
+button{
+    width: 126px;
+    height: 42px;    
     margin-bottom: 10px;    
-    padding: 5px 10px;
+    padding: 10px 10px;
     margin-bottom: 20px;
     border-radius: 25px;
+    font-family: "Space Grotesk",sans-serif;
     font-size: 1.25rem;
+    font-weight: 500;
     border: 1px solid var(--white);
     color: var(--white);
     background-color: transparent;
+}
+
+button:hover{
+    background-color: var(--white);
+    color: var(--grey);
 }
 
 .pomodoro-timer{
@@ -59,16 +68,22 @@ button{
     justify-content: center;    
 }
 .timer--options button{
-    width: 100px;
-    height: 30px;
+    width: 130px;
+    height: 42px;
     padding: 0 10px;
     font-size: 1.5rem;
     background-color: var(--white);
-    font-weight: 400;
+    font-weight: 500;
     color: var(--grey);
 }
 
+.timer--options button:hover{
+    background-color: transparent;
+    color: var(--white);
+}
+
 .timer--options .gear-icon{
+    margin-top: 8px;
     display: inline-block;
     width: 25px;
     height: 25px;
@@ -81,6 +96,7 @@ button{
 }
 
 .timer--options .reload-icon{
+    margin-top: 8px;
     display: inline-block;
     width: 25px;
     height: 25px;
@@ -90,4 +106,9 @@ button{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.button--active{
+    background-color: var(--white);
+    color: var(--grey);
 }

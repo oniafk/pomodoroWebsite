@@ -45,7 +45,7 @@
 
     .pomodoro--options button{
         margin: 0 10px;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         padding: 8px 16px;
     }
 
@@ -59,8 +59,8 @@
     }
 
     .timer--options button{
-        width: 110px;
-        height: 30px;
+        width: 130px;
+        height: 48px;
         font-size: 2rem;
         padding: 0 10px;
         font-weight: 400;
