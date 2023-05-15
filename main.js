@@ -67,7 +67,7 @@ restartTimerBtn.addEventListener("click", function() {
 });
 
 function updateTimer(minutes, seconds) {    
-const time = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+const time = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`; // revisar para que sirve padStart
 timer.textContent = time;
 minutesToRun = minutes;
 secondsToRun = seconds;
