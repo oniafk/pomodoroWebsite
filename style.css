@@ -127,3 +127,6 @@ button:hover{
     color: var(--grey);
 }
 
+.widget{
+    display: none;
+}

@@ -9,6 +9,8 @@ const api = axios.create({
 });
 
 let currentPosition = {};
+let weatherImg = document.querySelector('.weather-img');
+let weatherTemp = document.querySelector('.weather-temp');
 
 function getPosition() {
     return new Promise((resolve, reject) => {
@@ -16,9 +18,12 @@ function getPosition() {
     });
   }
 
-async function getWeather ({lat, lng}) {
-        const {data} = await api(`weather?lat=${lat}&lon=${lng}`);
-        console.log(data);    
+  async function getWeather ({lat, lng}) {
+    const {data} = await api(`weather?lat=${lat}&lon=${lng}`);
+    weatherImg.src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+    weatherTemp.innerHTML = `${Math.round(data.main.temp - 273.15)}&deg;`;
+    console.log(data);
+    return data;    
 }
 
 async function showWeaterCurrentPosition() {
@@ -38,4 +43,6 @@ async function showWeaterCurrentPosition() {
     }
   }
   
+
+
   showWeaterCurrentPosition();

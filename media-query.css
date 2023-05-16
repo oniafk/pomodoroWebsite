@@ -66,20 +66,30 @@
         font-weight: 400;
     }
 
-    .spotify{
+    .widget{
         padding-left: 35px;
         padding-bottom: 20px;
         display: flex;
         justify-content: left;
         width: 100%;
     }
-    .spotify span{    
-        width: 120px;
-        height: 150px;
-        margin-left: 10px;
-        padding: 5px;
-        background-image: url(./icons/icons8-spotify-150.png);
-        background-size:contain;        
-        background-repeat: no-repeat;
+    
+    .weatherWidget--container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        width: 150px;
+        background-color: #00000070;
+        border-radius: 10px;
+        align-items: center;
+        justify-items: center;
     }
+
+    .weather-temp{
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: var(--white);
+        
+    }
+    
 }
