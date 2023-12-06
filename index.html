@@ -1,51 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./media-query.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./media-query.css" />
     <title>Pomodoro Timer</title>
-</head>
-<body>    
+  </head>
+  <body>
     <section>
-        <div class="options-top">
-            <div class="studyWithMe--container">
-                <span class="studyWithMe--Logo"></span>
-            </div>            
-            <div class="discord--container">
-                <span class="discord--Logo"></span>  
-            </div>                                            
+      <div class="options-top">
+        <div class="studyWithMe--container">
+          <span class="studyWithMe--Logo"></span>
         </div>
-        <div class="pomodoro--options">
-            <button id="pomodoro" onclick="pomodoroTimerSetup()" class="button--active">pomodoro</button>
-            <button id="shortBreak" onclick="shortBreakTimerSetup()">short break</button>
-            <button id="longBreak" onclick="longBreakTimerSetup()">long break</button>
+        <div class="youtube-video">
+          <iframe
+            width="280"
+            height="165"
+            src="https://www.youtube.com/embed/lHpYyYtkmrw?si=_b1BJTeENTJpjkQ_"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
-        <div class="pomodoro-timer" id="pomodoroTimer">25:00</div>
-        <div class="timer--options">
-            <button id="startBtn" >Start</button>
-            <span class="gear-icon"></span>
-            <span class="reload-icon" id="restartIcon"></span>
-        </div>       
-        <div class="widget">
-            <div class="weatherWidget--container">
-                <div class="weatherImg--container">
-                    <img class="weather-img" src="" alt="">
-                </div>
-                <div class="weatherTemp--container">
-                    <span class="weather-temp"></span>
-                </div>
-            </div>
+      </div>
+      <div class="pomodoro--options">
+        <button
+          id="pomodoro"
+          onclick="pomodoroTimerSetup()"
+          class="button--active"
+        >
+          pomodoro
+        </button>
+        <button id="shortBreak" onclick="shortBreakTimerSetup()">
+          short break
+        </button>
+        <button id="longBreak" onclick="longBreakTimerSetup()">
+          long break
+        </button>
+      </div>
+      <div class="pomodoro-timer" id="pomodoroTimer">25:00</div>
+      <div class="timer--options">
+        <button id="startBtn">Start</button>
+        <span class="gear-icon"></span>
+        <span class="reload-icon" id="restartIcon"></span>
+      </div>
+      <div class="widget">
+        <div class="weatherWidget--container">
+          <div class="weatherImg--container">
+            <img class="weather-img" src="" alt="" />
+          </div>
+          <div class="weatherTemp--container">
+            <span class="weather-temp"></span>
+          </div>
         </div>
+      </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./main.js"></script>    
+    <script src="./main.js"></script>
     <script src="./APIKey.js"></script>
     <script src="./weaterAPI.js"></script>
-</body>
+  </body>
 </html>
